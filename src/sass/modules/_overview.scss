@@ -1,0 +1,158 @@
+$fontSize: 14px;
+
+.color__overlay {
+	position: relative;
+
+	&:before{
+	  position: absolute;
+	  content:" ";
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 0;
+	  background-color: rgba(217, 217, 217, 0.8);
+	  border-radius: 5px;
+	}
+
+}
+
+.overlayview {
+	background-size: 100% 100% !important;
+	background-repeat: no-repeat !important;
+	width: 220px !important;
+	height: 170px !important;
+
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 50);
+	letter-spacing: 1.52px;
+	font-weight: 600;
+	border-radius: 5px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: -18px;
+		top: 18px;
+		width: 0;
+		height: 0;
+		border-top: 9px solid transparent;
+		border-right: 18px solid $color-gray;
+		border-bottom: 9px solid transparent;
+	}
+
+	/* For the color overlay */
+	* {
+    	position: relative;
+    	font-family: $font-family-karla;
+	}	
+
+	.header	{
+		z-index: 100;
+		display: block;
+		padding-bottom: 8px;
+
+		.title{
+			display: inline-block;
+			padding-top: 30px;
+			padding-left: 41px;
+			padding-right: 5px;
+			
+			font-size: $fontSize;
+			font-weight: 600;
+		}
+
+		.weather {
+			position: absolute;
+			top: 23px;
+			right: 38px;
+			max-height: 50px;
+			vertical-align: bottom;
+			
+		}
+		.button--cross {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 500;
+			opacity: 0.5;
+
+			img {
+				padding: 7px;
+			}
+			&:hover {
+				cursor: pointer;
+				opacity: 1;
+			}
+		}
+
+	}
+
+	.button--info {
+		display: block;
+		width: 150px;
+		height: 30px;
+		margin: 0 auto;
+		margin-top: 9px;
+
+		color: #fff;
+		text-align: center;
+		border-radius: 4px;
+		text-transform: uppercase;
+		font-weight: 100;
+		line-height: 30px;
+		cursor: pointer;
+		
+		background: $color-blue;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 50);
+
+		&:hover {
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 50);
+			background-color: $color-blue-light;
+		}
+	}	
+
+	.info {
+		display: block;
+		width: 150px;
+		padding: 9px 6px;
+		margin: 0 auto;
+		z-index: 100;
+		border-top: 2px solid #F2DE13;
+
+		p {
+			display: block;
+			font-weight: 600;
+			font-size: 10px;
+
+			&:last-of-type {
+				padding-top: 8px;
+			}
+			span {
+				display: inline-block;
+				font-weight: 600;
+			}
+		}
+		
+		.mbs {
+			font-size: 7px;
+			text-align: top;
+			float: right;
+			letter-spacing: 0.2px;
+		}
+		.wifi, 
+		.cost {
+			font-size: 12px;
+			float: right;
+			padding-left: 5px;
+			padding-right: 0px;
+		}
+		.cost {
+			padding-left: 3px;
+		}
+		.euro__icon, 
+		.wifi__icon {
+			height: 12px;
+			float: right;
+		}
+	}
+}
